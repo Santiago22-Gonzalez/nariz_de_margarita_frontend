@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kits — Nariz de Margarita</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://kit.fontawesome.com/0b35ce8670.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- HEADER (igual al index) -->
+  <header>
+    <div class="announcement-bar">
+      <div class="container">
+        <span class="announce-icon">🚚</span>
+        <span class="announce-text">Envíos GRATIS para compras superiores a $400.000 COP</span>
+      </div>
+    </div>
+
+    <div class="header-main container">
+      <div class="logo-left">
+        <a href="../index.html" class="brand">
+          <img src="../images/logo_transparente.png" alt="Nariz de Margarita" class="brand-img" />
+        </a>
+      </div>
+
+      <div class="search-center">
+        <form class="header-search" role="search">
+          <input type="search" placeholder="¿Qué producto deseas buscar?" aria-label="Buscar" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="header-icons">
+        <button class="icon-btn user-btn" id="userBtn" aria-expanded="false" aria-haspopup="true" title="Mi cuenta">
+          <i class="fa-regular fa-user"></i>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="dialog" aria-hidden="true">
+          <div class="user-dropdown-inner">
+            <h4>Mi Cuenta</h4>
+            <hr />
+            <button class="user-action btn-primary">Iniciar Sesión</button>
+            <button class="user-action btn-outline">Registrarme</button>
+          </div>
+        </div>
+        <button class="icon-btn" title="Favoritos">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <button class="icon-btn" id="cartBtn" title="Carrito" aria-label="Abrir carrito">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-11z"></path>
+            <circle cx="10" cy="20" r="1.5"></circle>
+            <circle cx="18" cy="20" r="1.5"></circle>
+            <path d="M6 6L4 2" opacity="0"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="secondary-nav">
+      <div class="container nav-row">
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+              Fragancias <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <div class="nav-dropdown-menu" aria-hidden="true">
+              <a href="#fragancias-femeninas">Femeninas</a>
+              <a href="#fragancias-masculinas">Masculinas</a>
+            </div>
+          </div>
+          <a href="../index.html">Ofertas</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+              Cuidado Personal <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <div class="nav-dropdown-menu" aria-hidden="true">
+              <a href="#cuidado-aceites">Aceites Esenciales</a>
+              <a href="#cuidado-crema">Crema Humectante</a>
+              <a href="#cuidado-feromonas">Feromonas Atracxion</a>
+              <a href="#cuidado-perfume">Perfume Capilar</a>
+              <a href="#cuidado-mantequillas">Mantequillas</a>
+            </div>
+          </div>
+          <a href="#" class="active">Kits</a>
+          <a href="../index.html">Nosotros</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="../mayorista/Index.html" class="btn-cta">Hazte mayorista →</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="hamburgerAccordion" class="hamburger-accordion" aria-hidden="true">
+      <div class="container">
+        <p class="accordion-item">Kit de emprendedores</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- PÁGINA DE KITS -->
+  <main class="container" style="padding: 32px 0;">
+    <section class="kits-section">
+      <h1 class="section-title">Kits</h1>
+      
+      <!-- Sidebar con filtros -->
+      <div class="kits-container">
+        <aside class="kits-sidebar">
+          <h3>68 PRODUCTOS</h3>
+
+          <div class="filter-group">
+            <h4>Departamento</h4>
+            <label><input type="checkbox" /> Kits</label>
+            <label><input type="checkbox" /> Splash</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Categoría</h4>
+            <label><input type="checkbox" /> My Splash</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Género</h4>
+            <label><input type="checkbox" /> Femenino</label>
+            <label><input type="checkbox" /> Masculino</label>
+            <label><input type="checkbox" /> Unisex</label>
+          </div>
+        </aside>
+
+        <!-- Grid de productos -->
+        <section class="kits-products">
+          <!-- Producto 1 -->
+          <div class="product-card" data-id="combo-1" data-price="59000" data-name="Combo 1" data-image="../images/Combo_splash_crema.png">
+            <span class="badge-new">Nuevo</span>
+            <img src="../images/Combo_splash_crema.png" alt="Combo 1" />
+            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+            <h3>2 Splash + 2 Cremas</h3>
+            <p class="product-price">
+              Desde: <strong>$ 70.000</strong>
+            </p>
+            <p class="product-desc">Incluye Bolsa Navidad</p>
+            <button class="btn-buy add-cart" data-product-id="combo-1" data-product-name="Combo 1" data-product-price="59000" data-product-image="../images/Combo_splash_crema.png">¡Lo quiero!</button>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="product-card" data-id="combo-2" data-price="52900" data-name="Combo 2" data-image="../images/Combo2.png">
+            <span class="badge-new">Nuevo</span>
+            <img src="../images/Combo2.png" alt="Combo 2" />
+            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+            <h3>1 Splash + 1 Crema</h3>
+            <p class="product-price">
+              Desde: <strong>$ 40.000</strong>
+            </p>
+            <p class="product-desc">Incluye Bolsa Navidad</p>
+            <button class="btn-buy add-cart" data-product-id="combo-2" data-product-name="Combo 2" data-product-price="52900" data-product-image="../images/Combo2.png">¡Lo quiero!</button>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="product-card" data-id="combo-3" data-price="39000" data-name="Combo 3" data-image="../images/Combo3.png">
+            <img src="../images/Combo3.png" alt="Combo 3" />
+            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+            <h3>1 Splash + 1 Crema + 1 Mantequilla</h3>
+            <p class="product-price">
+              Desde: <strong>$ 39.000</strong>
+            </p>
+            <p class="product-desc">Incluye Bolsa Navidad</p>
+            <button class="btn-buy add-cart" data-product-id="combo-3" data-product-name="Combo 3" data-product-price="39000" data-product-image="../images/Combo3.png">¡Lo quiero!</button>
+          </div>
+
+          <!-- Agregar más productos aquí según necesites -->
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart drawer (igual al index) -->
+  <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-overlay" data-close="true"></div>
+    <aside class="cart-panel" role="dialog" aria-label="Tu carrito de compras" aria-hidden="true">
+      <header class="cart-header">
+        <h3>TU CARRITO DE COMPRAS</h3>
+        <button class="cart-close" aria-label="Cerrar">&times;</button>
+      </header>
+      <div class="cart-body">
+        <ul class="cart-items" aria-live="polite"></ul>
+        <div class="cart-empty" hidden>
+          <i class="fa-solid fa-basket-shopping fa-2x"></i>
+          <p>Tu carrito está vacío.</p>
+        </div>
+      </div>
+      <footer class="cart-footer">
+        <div class="cart-totals">
+          <span class="cart-subtotal-label">Subtotal:</span>
+          <strong class="cart-subtotal">$0.00</strong>
+        </div>
+        <div class="cart-actions">
+          <a href="#" class="btn btn-primary">Ver carrito</a>
+          <a href="#" id="checkoutWa" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Finalizar compra</a>
+        </div>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- Botón WhatsApp -->
+  <button id="whatsappBtn" class="whatsapp-btn" aria-label="WhatsApp">
+    <img src="../images/Whatsapp-1.png" alt="WhatsApp" />
+  </button>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+<style>
+/* ...existing code... */
+
+/* Página de Kits */
+.kits-section { padding: 20px 0; }
+.kits-container { display: flex; gap: 28px; }
+
+/* Sidebar filtros */
+.kits-sidebar {
+  width: 240px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(0,0,0,0.04);
+}
+.kits-sidebar h3 { font-size: 0.95rem; color: #333; margin-bottom: 16px; }
+.filter-group { margin-bottom: 20px; }
+.filter-group h4 { font-size: 0.95rem; color: #333; margin-bottom: 12px; cursor: pointer; }
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+}
+.filter-group input { cursor: pointer; }
+
+/* Grid de productos */
+.kits-products {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card producto para kits */
+.kits-products .product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.badge-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.kits-products .product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.btn-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.btn-favorite i { color: #ff5ea0; }
+
+.kits-products h3 {
+  font-size: 0.95rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-price {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+.product-price strong { color: #333; }
+
+.product-desc {
+  background: #C6E04F;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin: 8px 0;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 10px;
+  background: #663399;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-buy:hover { background: #5a2e8a; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .kits-container { flex-direction: column; }
+  .kits-sidebar { width: 100%; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.04); padding-bottom: 20px; }
+  .kits-products { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+</style>

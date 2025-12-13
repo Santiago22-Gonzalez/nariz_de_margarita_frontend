@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nariz de Margarita</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0b35ce8670.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- Barra de anuncio superior -->
+      <div class="announcement-bar">
+        <div class="container">
+          <span class="announce-icon">🚚</span>
+          <span class="announce-text"
+            >Envíos GRATIS para compras superiores a $400.000 COP</span
+          >
+        </div>
+      </div>
+
+      <!-- Header principal: logo + buscador centrado + iconos -->
+      <div class="header-main container">
+        <div class="logo-left">
+          <a href="#" class="brand">
+            <img
+              src="./images/logo_transparente.png"
+              alt="Nariz de Margarita"
+              class="brand-img"
+            />
+          </a>
+        </div>
+
+        <div class="search-center">
+          <form class="header-search" role="search">
+            <input
+              type="search"
+              placeholder="¿Qué producto deseas buscar?"
+              aria-label="Buscar"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-icons">
+          <button
+            class="icon-btn user-btn"
+            id="userBtn"
+            aria-expanded="false"
+            aria-haspopup="true"
+            title="Mi cuenta"
+          >
+            <i class="fa-regular fa-user"></i>
+          </button>
+
+          <!-- Ventana desplegable de usuario -->
+          <div
+            class="user-dropdown"
+            id="userDropdown"
+            role="dialog"
+            aria-hidden="true"
+          >
+            <div class="user-dropdown-inner">
+              <h4>Mi Cuenta</h4>
+              <hr />
+              <button class="user-action btn-primary" id="loginBtn">
+                Iniciar Sesión
+              </button>
+              <button class="user-action btn-outline" id="registerBtn">
+                Registrarme
+              </button>
+            </div>
+          </div>
+
+          <button class="icon-btn" title="Favoritos">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+          <!-- Cambiado: icono SVG de carrito -->
+          <button
+            class="icon-btn"
+            id="cartBtn"
+            title="Carrito"
+            aria-label="Abrir carrito"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 6h15l-1.5 9h-11z"></path>
+              <circle cx="10" cy="20" r="1.5"></circle>
+              <circle cx="18" cy="20" r="1.5"></circle>
+              <path d="M6 6L4 2" opacity="0"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de navegación secundaria -->
+      <div class="secondary-nav">
+        <div class="container nav-row">
+          <button
+            class="hamburger"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <nav class="nav-links" aria-label="Navegación principal">
+            <!-- Fragancias dropdown -->
+            <div class="nav-dropdown">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Jardin de Aromas <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <div class="nav-dropdown-menu" aria-hidden="true">
+                <a href="#fragancias-femeninas">Femeninas</a>
+                <a href="#fragancias-masculinas">Masculinas</a>
+              </div>
+            </div>
+
+            <!-- Cuidado Personal dropdown -->
+            <div class="nav-dropdown">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Cuidado Personal <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <div class="nav-dropdown-menu" aria-hidden="true">
+                <a href="#cuidado-mantequillas">Mantequillas</a>
+                <a href="#cuidado-crema">Cremas Humectantes</a>
+                <a href="#cuidado-splash">Splash</a>
+                <a href="#cuidado-perfume">Perfume Capilar</a>
+                <a href="#cuidado-aceite">Aceite escencial</a>
+                <a href="#cuidado-cera">Cera y Gel</a>
+              </div>
+            </div>
+
+            
+            <a href="#">Espacios que florecen</a>
+
+            <a href="#">Flores y pelos</a>
+
+            <!-- Kits link (abre página de kits) -->
+            <a href="./pages/kits.html">Kits</a>
+            
+          </nav>
+
+          <div class="nav-cta">
+            <a href="mayorista/Index.html" class="btn-cta">Hazte mayorista →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acordeón desplegable del hamburger -->
+      <div
+        id="hamburgerAccordion"
+        class="hamburger-accordion"
+        aria-hidden="true"
+      >
+        <div class="container">
+          <p class="accordion-item">Kit de emprendedores</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="content-banner">
+        <p>Lo mejor de lo mejor</p>
+        <h2>Fragancias que perduran<br />Arriesgate a probarlos</h2>
+        <a href="#" class="btn-banner">COMPRAR AHORA</a>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="benefits">
+      <div class="benefits-container">
+        <div class="benefit">
+          <i class="fa-solid fa-plane"></i>
+          <div>
+            <strong>Envío gratuito a nivel Bogotá</strong>
+            <p>En pedido superior a $150</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <i class="fa-solid fa-rotate-left"></i>
+          <div>
+            <strong>Contrareembolso</strong>
+            <p>100% garantía de devolución de dinero</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <i class="fa-solid fa-gift"></i>
+          <div>
+            <strong>Tarjeta regalo especial</strong>
+            <p>Ofrece bonos especiales con regalo</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <strong>Servicio al cliente 24/7</strong>
+            <p>Llámenos 24/7 al 3103006010</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mejores Categorías -->
+    <section class="categories">
+      <h2 class="section-title">Mejores Categorías</h2>
+      <div class="categories-list">
+        <div
+          class="category-card"
+          style="background-image: url('./images/foto1.jpg')"
+        >
+          <div class="category-content">
+            <span>Café Moca</span>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+        <div
+          class="category-card"
+          style="background-image: url('./images/foto2.jpg')"
+        >
+          <div class="category-content">
+            <span>Paris Iris</span>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+        <div
+          class="category-card"
+          style="background-image: url('./images/foto3.jpg')"
+        >
+          <div class="category-content">
+            <span>Azul celeste</span>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mejores Productos -->
+    <section class="products">
+      <h2 class="section-title">Mejores Productos</h2>
+      <div class="products-tabs">
+        <button class="tab active">Destacados</button>
+        <button class="tab">Más Recientes</button>
+        <button class="tab">Mejores Vendidos</button>
+      </div>
+      <div class="products-list">
+        <div class="product-card">
+          <span class="discount">-13%</span>
+          <img src="./images/foto4.jpg" alt="Cafe Irish" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">Cafe Irish</span>
+          <div class="prices">
+            <span class="price">$45.000</span>
+            <span class="old-price">$52.000</span>
+          </div>
+          <br />
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <span class="discount">-22%</span>
+          <img src="./images/Fotoeditable2.png" alt="Blue Inglés" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">Blue Inglés</span>
+          <div class="prices">
+            <span class="price">$57.000</span>
+            <span class="old-price">$68.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="./images/Fotoeditable.png" alt="Cafe Australiano" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="product-name">Cafe Australiano</span>
+          <div class="prices">
+            <span class="price">$42.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="./images/white.jpg" alt="Cafe Helado" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">White Helado</span>
+          <div class="prices">
+            <span class="price">$45.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collage de Fotos -->
+    <section class="photo-collage">
+      <div class="collage-grid">
+        <img
+          src="./images/fotogrupal1.jpg"
+          alt="Collage 1"
+          class="collage-img img-1"
+        />
+        <img
+          src="./images/fotogrupal2.jpg"
+          alt="Collage 2"
+          class="collage-img img-2"
+        />
+        <img
+          src="./images/fotogrupal4.jpg"
+          alt="Collage 3"
+          class="collage-img img-3"
+        />
+        <img
+          src="./images/fotogrupal3.jpg"
+          alt="Collage 4"
+          class="collage-img img-4"
+        />
+        <img
+          src="./images/fotogrupal5.jpg"
+          alt="Collage 5"
+          class="collage-img img-5"
+        />
+      </div>
+    </section>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- Especiales -->
+    <section class="special-products">
+      <h2 class="section-title">Especiales</h2>
+      <div class="products-list">
+        <div class="product-card">
+          <span class="discount">-10%</span>
+          <img src="./images/aqua de gio.jpg" alt="Aqua" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">Aqua</span>
+          <div class="prices">
+            <span class="price">$52.000</span>
+            <span class="old-price">$55.000</span>
+          </div>
+          <br />
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <span class="discount">-15%</span>
+          <img src="./images/cafe mour.jpg" alt="Mour" />
+          <!-- Botones de acción -->
+          <div class="product-actions">
+            <button title="Ver"><i class="fa-regular fa-eye"></i></button>
+            <button title="Favorito">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button title="Comparar">
+              <i class="fa-regular fa-circle"></i>
+            </button>
+          </div>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">Mour</span>
+          <div class="prices">
+            <span class="price">$50.000</span>
+            <span class="old-price">$60.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <span class="discount">-30%</span>
+          <img src="./images/love.jpg" alt="Rojo Viena" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="product-name">Rojo Viena</span>
+          <div class="prices">
+            <span class="price">$30.000</span>
+            <span class="old-price">$50.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="./images/pink.jpg" alt="Pink Liqueurs" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="product-name">Pink Liqueurs</span>
+          <div class="prices">
+            <span class="price">$65.000</span>
+          </div>
+          <button class="add-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Últimos Blogs -->
+    <section class="latest-blogs">
+      <h2 class="section-title">Últimos Blogs</h2>
+      <div class="blogs-list">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./images/boreal.jpg" alt="Blog 1" />
+          </div>
+          <div class="blog-content">
+            <h3>Boreal Vento</h3>
+            <span class="blog-date"
+              >“El día en que decides empezar de cero”</span
+            >
+            <p>
+              Ese día te levantas con la sensación de que algo tiene que
+              cambiar. No sabes exactamente qué, pero te sientes listo para
+              intentarlo. Abres la ventana y el aire frío golpea tu cara,
+              despertándote más que cualquier alarma. Te aplicas Boreal Vento:
+              una mezcla fresca de menta suave, hojas de cedro y un toque de
+              brisa salada. El olor se siente como caminar entre árboles recién
+              mojados después de una lluvia ligera. Mientras avanzas por la
+              mañana, el perfume no desaparece; más bien te recuerda que estás
+              tomando el control. Completas tus tareas, haces lo que dijiste que
+              harías y, aunque el día tenga sus retos, sientes que te estás
+              moviendo hacia adelante. Vento se convierte en ese aroma que
+              simboliza disciplina, claridad y nuevos comienzos.
+            </p>
+            <a href="#" class="blog-btn">LEER MÁS</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./images/urban.jpg" alt="Blog 2" />
+            <div class="blog-actions">
+              <button title="Ver"><i class="fa-regular fa-eye"></i></button>
+              <button title="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h3>Urban Pulse</h3>
+            <span class="blog-date">Cuando todo el día se mueve rápido”</span>
+            <p>
+              Hoy tienes mil cosas que hacer: salir temprano, entregar trabajos,
+              entrenar, hacer vueltas. Hay días que simplemente no paran. Antes
+              de salir, te pones Urban Pulse: una mezcla eléctrica de toronja
+              fresca, especias suaves y maderas limpias. A medida que el día
+              avanza, el olor combina perfecto con el ritmo acelerado: te
+              mantiene alerta, enfocado, casi como si llevaras el “modo activo”
+              encendido. No es pesado, no estorba, es simplemente esa vibra de
+              energía urbana que acompaña cada paso. Cuando anochece y por fin
+              te sientas, sientes que cumpliste con todo… y Pulse se queda como
+              el recuerdo aromático de un día bien vivido.
+            </p>
+            <a href="#" class="blog-btn">LEER MÁS</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="./images/luna.jpg" alt="Blog 3" />
+          </div>
+          <div class="blog-content">
+            <h3>Luna Mellow</h3>
+            <span class="blog-date">“Un día que te regalas para ti misma”</span>
+            <p>
+              Decides tomar la mañana con calma. Pones música suave, arreglas tu
+              espacio, abres las cortinas y dejas que entre la luz clara. Te
+              pones Luna Mellow, que huele a flores pequeñas, algodón tibio y un
+              toque de vainilla ligera. El aroma te envuelve como una manta
+              suave. No es fuerte, sino reconfortante. Acompaña esos momentos en
+              los que haces cosas sencillas: estudiar tranquila, decorar tu
+              espacio, planear tu semana o simplemente respirar un poco. Es un
+              perfume que no busca impresionar a nadie. Está hecho para cuando
+              quieres cuidarte, pensar en ti y recargar energía desde adentro.
+            </p>
+            <a href="#" class="blog-btn">LEER MÁS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de inicio de sesión -->
+    <div
+      id="loginModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="loginTitle"
+    >
+      <div class="modal-overlay" data-close="true"></div>
+      <div class="modal-dialog">
+        <div class="modal-grid">
+          <div
+            class="modal-left"
+            style="background-image: url('./images/Inicio.jpg')"
+            aria-hidden="true"
+          >
+            <!-- botón de cerrar dentro del panel izquierdo -->
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+          </div>
+          <div class="modal-right">
+            <h2 id="loginTitle">Iniciar sesión</h2>
+            <p class="modal-sub">
+              Elige una de las siguientes opciones para confirmar tu identidad.
+            </p>
+            <button class="login-option btn-outline">
+              <i class="fa-regular fa-key"></i> Recibir código de acceso por
+              e-mail
+            </button>
+            <button class="login-option btn-outline">
+              <i class="fa-solid fa-envelope"></i> Entrar con e-mail y
+              contraseña
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de registro (usa estilos existentes de .modal) -->
+    <div
+      id="registerModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="registerTitle"
+    >
+      <div class="modal-overlay" data-close="true"></div>
+
+      <div class="modal-dialog" role="document" aria-modal="true">
+        <div class="modal-grid">
+          <div
+            class="modal-left"
+            style="
+              background-image: url('./images/register-hero.jpg');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <!-- botón de cerrar dentro del panel izquierdo -->
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+
+            <div
+              style="
+                padding: 28px;
+                color: #fff;
+                text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <h2 style="margin: 0 0 10px">
+                ¿Por qué emprender en perfumería con incosmetic glass?
+              </h2>
+              <p>¡No te pierdas esta aventura!</p>
+              <p style="color: #ffd700; margin-top: 12px; font-weight: 600">
+                Completa el formulario si deseas convertirte en un emprendedor
+                con Incosmetic Glass
+              </p>
+            </div>
+          </div>
+
+          <div class="modal-right">
+            <h2 id="registerTitle" style="margin-top: 0">Registrarme</h2>
+
+            <form id="registerForm" class="register-form">
+              <div class="form-group">
+                <label for="regName">Nombre</label>
+                <input
+                  id="regName"
+                  name="nombre"
+                  type="text"
+                  placeholder="Nombre*"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="regEmail">Correo electrónico</label>
+                <input
+                  id="regEmail"
+                  name="email"
+                  type="email"
+                  placeholder="Correo electrónico*"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="regCountry">País</label>
+                  <select id="regCountry" name="pais" required>
+                    <option value="">Selecciona</option>
+                    <option value="co">co</option>
+                    <option value="mx">mx</option>
+                    <option value="ar">ar</option>
+                    <option value="pe">pe</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="regWhatsapp">WhatsApp</label>
+                  <input
+                    id="regWhatsapp"
+                    name="whatsapp"
+                    type="text"
+                    placeholder="WhatsApp*"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="regExperience"
+                  >¿Tienes experiencia en el negocio de perfumería?</label
+                >
+                <select id="regExperience" name="experiencia" required>
+                  <option value="">Selecciona</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox">
+                <input id="regTerms" name="terminos" type="checkbox" required />
+                <label for="regTerms"
+                  >Aceptas el uso de tus datos según nuestra política de
+                  privacidad</label
+                >
+              </div>
+
+              <button type="submit" class="btn-submit">
+                DESCARGAR CATÁLOG
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón flotante WhatsApp (arrastrable) -->
+    <button id="whatsappBtn" class="whatsapp-btn" aria-label="WhatsApp">
+      <img src="./images/Whatsapp-1.png" alt="WhatsApp" />
+    </button>
+
+    <!-- Cart drawer -->
+    <div id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-overlay" data-close="true"></div>
+      <aside
+        class="cart-panel"
+        role="dialog"
+        aria-label="Tu carrito de compras"
+        aria-hidden="true"
+      >
+        <header class="cart-header">
+          <h3>TU CARRITO DE COMPRAS</h3>
+          <button class="cart-close" aria-label="Cerrar">&times;</button>
+        </header>
+
+        <div class="cart-body">
+          <!-- Contenedor para items dinámicos -->
+          <ul class="cart-items" aria-live="polite"></ul>
+
+          <!-- Mensaje cuando está vacío -->
+          <div class="cart-empty" hidden>
+            <i class="fa-solid fa-basket-shopping fa-2x"></i>
+            <p>Tu carrito está vacío.</p>
+          </div>
+        </div>
+
+        <footer class="cart-footer">
+          <div class="cart-totals">
+            <span class="cart-subtotal-label">Subtotal:</span>
+            <strong class="cart-subtotal">$0.00</strong>
+          </div>
+          <div class="cart-actions">
+            <a href="cart.html" class="btn btn-primary">Ver carrito</a>
+            <!-- cambiado: ahora apunta dinámicamente a WhatsApp -->
+            <a
+              href="#"
+              id="checkoutWa"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Finalizar compra</a
+            >
+          </div>
+        </footer>
+      </aside>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="../Proyecto Sena/Base de datos/db.js"></script>
+  </body>
+</html>
