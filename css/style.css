@@ -131,7 +131,8 @@ body {
   cursor: pointer;
 }
 
-.banner {
+/* Carrusel de imágenes */
+.carousel-inner{
   width: 100%;
   height: 420px;
   background: linear-gradient(90deg, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.1) 100%), url('../images/Baner3.png') center/cover no-repeat;
@@ -140,44 +141,6 @@ body {
   justify-content: flex-start;
   position: relative;
 }
-
-.content-banner {
-  color: #fff;
-  margin-left: 8%;
-  max-width: 500px;
-}
-
-.content-banner p {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #e6d3b3;
-}
-
-.content-banner h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  line-height: 1.1;
-}
-
-.btn-banner {
-  display: inline-block;
-  background: #c7a17a;
-  color: #fff;
-  padding: 12px 32px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
-
-
-.btn-banner:hover {
-  background: #a67c52;
-}
-
-
 
 
 /* Beneficios debajo del banner */
@@ -873,7 +836,7 @@ body {
   inset: 0;
   background: rgba(0,0,0,0.45);
   z-index: 1;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .modal-dialog {
@@ -1237,7 +1200,7 @@ body {
 /* Estilo y posición del botón de cierre sobre la imagen (superior derecha) */
 .modal-dialog .modal-left .modal-close {
   position: absolute;
-  top: 12px;
+  top: 50px;
   right: 12px;
   width: 40px;
   height: 40px;
@@ -1264,4 +1227,29 @@ body {
     height: 36px;
     font-size: 18px;
   }
+}
+
+.modal-right .modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: #222;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  z-index: 5;
+}
+
+.modal-dialog,
+.modal-dialog * {
+  pointer-events: auto;
 }
