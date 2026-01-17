@@ -58,8 +58,6 @@ import { getData } from "./api.js";
     });
   });
 
-
-  
   if (modalClose) modalClose.addEventListener("click", closeLogin);
 
   document.addEventListener("keydown", (e) => {
@@ -518,14 +516,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (registerForm) {
-    registerForm.addEventListener("submit", (e) => {
+    registerForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const data = Object.fromEntries(new FormData(registerForm));
-      console.log("Registro enviado:", data);
-      // Aquí puedes hacer fetch() al servidor si lo deseas, por ahora solo confirmación:
-      alert("Gracias por registrarte. Pronto te contactaremos.");
-      registerForm.reset();
-      closeRegister();
+
+      const formData = new FormData(registerForm);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(
+          "http://localhost:3000/api/auth/registro",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          alert(result.error || "Error al registrar usuario");
+          return;
+        }
+
+        alert("Usuario registrado correctamente");
+        registerForm.reset();
+        closeRegister?.();
+      } catch (error) {
+        console.error("Error en el registro:", error);
+        alert("Error de conexión con el servidor");
+      }
     });
   }
 })();
